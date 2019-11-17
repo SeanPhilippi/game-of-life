@@ -22,8 +22,6 @@ const App: React.FC = () => {
     return rows;
   });
 
-  console.log(grid)
-
   return (
     <div style={ s.grid }>
       {
@@ -32,12 +30,14 @@ const App: React.FC = () => {
             key={`${ i }-${ j }`}
             onClick={() => {
               const newGrid = produce(grid, gridCopy => {
-                gridCopy[i][j] = 1;
+                gridCopy[i][j] = grid[i][j] ? 0 : 1;
               });
               setGrid(newGrid);
             }}
             style={{
-              width: 20, height: 20, backgroundColor: `${ grid[i][j] ? 'maroon' : null }`,
+              width: 20,
+              height: 20,
+              backgroundColor: grid[i][j] ? 'maroon' : undefined,
               border: 'solid 1px teal'
             }}/>
           )
