@@ -21,29 +21,38 @@ const App: React.FC = () => {
     };
     return rows;
   });
+  // defaults to false
+  const [running, setRunning] = useState(false);
 
   return (
-    <div style={ s.grid }>
-      {
-        grid.map((row, i) =>
-          row.map((col, j) => <div
-            key={`${ i }-${ j }`}
-            onClick={() => {
-              const newGrid = produce(grid, gridCopy => {
-                gridCopy[i][j] = grid[i][j] ? 0 : 1;
-              });
-              setGrid(newGrid);
-            }}
-            style={{
-              width: 20,
-              height: 20,
-              backgroundColor: grid[i][j] ? 'maroon' : undefined,
-              border: 'solid 1px teal'
-            }}/>
+    <>
+      <button
+        onClick={ () => setRunning(!running) }
+      >
+        { running ? 'start' : 'stop' }
+      </button>
+      <div style={ s.grid }>
+        {
+          grid.map((row, i) =>
+            row.map((col, j) => <div
+              key={`${ i }-${ j }`}
+              onClick={() => {
+                const newGrid = produce(grid, gridCopy => {
+                  gridCopy[i][j] = grid[i][j] ? 0 : 1;
+                });
+                setGrid(newGrid);
+              }}
+              style={{
+                width: 20,
+                height: 20,
+                backgroundColor: grid[i][j] ? 'maroon' : undefined, // if 0, maroon, if 1, undefined.  not null due to TS
+                border: 'solid 1px teal'
+              }}/>
+            )
           )
-        )
-      }
-    </div>
+        }
+      </div>
+    </>
   );
 };
 
