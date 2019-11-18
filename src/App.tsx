@@ -23,15 +23,19 @@ const s = {
   },
 };
 
+const generateEmptyGrid = () => {
+  const rows = [];
+  for (let i = 0; i < numRows; i++) {
+    rows.push(Array.from(Array(numCols).fill(0)));
+  };
+  return rows;
+}
+
 const App: React.FC = () => {
   // initializing grid with calling of useState, destructuring grid and setGrid from the return
   // first value of return is the value of the state, second it the update function
   const [grid, setGrid] = useState(() => { // using callback so this is called only upon initial render
-    const rows = [];
-    for (let i = 0; i < numRows; i++) {
-      rows.push(Array.from(Array(numCols).fill(0)));
-    };
-    return rows;
+    return generateEmptyGrid();
   });
   // first param for useState is initial value
   const [running, setRunning] = useState(false);
@@ -43,7 +47,6 @@ const App: React.FC = () => {
     if (!runningRef.current) {
       return;
     }
-
     setGrid(currentGrid => {
       return produce(currentGrid, gridCopy => {
         for (let i = 0; i < numRows; i++) {
@@ -56,19 +59,18 @@ const App: React.FC = () => {
               if (newI >= 0 && newI < numRows && newJ >= 0 && newJ < numCols) {
                 neighbors += currentGrid[newI][newJ];
               }
+            });
 
-              if (neighbors < 2 || neighbors > 3) {
-                gridCopy[i][j] = 0;
-              } else if (!currentGrid[i][j] || neighbors === 3) {
-                gridCopy[i][j] = 1;
-              }
-            })
+            if (neighbors < 2 || neighbors > 3) {
+              gridCopy[i][j] = 0;
+            } else if (currentGrid[i][j] === 0 && neighbors === 3) {
+              gridCopy[i][j] = 1;
+            }
           }
         }
       });
     });
-
-    setTimeout(runSimulation, 1000);
+    setTimeout(runSimulation, 300);
   }, []);
 
   return (
@@ -80,7 +82,25 @@ const App: React.FC = () => {
           runSimulation();
         }}
       >
-        { running ? 'stop' : 'start' }
+        { running ? 'Stop' : 'Start' }
+      </button>
+      <button
+        onClick={() => {
+          const rows = [];
+          for (let i = 0; i < numRows; i++) {
+            rows.push(Array.from(Array(numCols).fill(Math.random() > .5 ? 1 : 0)));
+          };
+          setGrid(rows);
+        }}
+      >
+        Random
+      </button>
+      <button
+        onClick={() => {
+          setGrid(generateEmptyGrid());
+        }}
+      >
+        Clear
       </button>
       <div style={ s.grid }>
         {
