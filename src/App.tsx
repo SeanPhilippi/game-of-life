@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { produce } from 'immer';
 import "./App.css";
 
@@ -13,23 +13,34 @@ const s = {
 };
 
 const App: React.FC = () => {
-  // initializing gride with calling of useState, destructuring grid and setGrid from the return
-  const [grid, setGrid] = useState(() => {
+  // initializing grid with calling of useState, destructuring grid and setGrid from the return
+  // first value of return is the value of the state, second it the update function
+  const [grid, setGrid] = useState(() => { // using callback so this is called only upon initial render
     const rows = [];
     for (let i = 0; i < numRows; i++) {
       rows.push(Array.from(Array(numCols).fill(0)));
     };
     return rows;
   });
-  // defaults to false
+  // first param for useState is initial value
   const [running, setRunning] = useState(false);
+
+  const runningRef = useRef(running);
+  runningRef.current = running;
+
+  const runSimulation = useCallback(() => {
+    if (!runningRef.current) {
+      return;
+    }
+    setTimeout(runSimulation, 1000);
+  }, []);
 
   return (
     <>
       <button
         onClick={ () => setRunning(!running) }
       >
-        { running ? 'start' : 'stop' }
+        { running ? 'stop' : 'start' }
       </button>
       <div style={ s.grid }>
         {
