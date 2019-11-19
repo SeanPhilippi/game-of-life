@@ -3,7 +3,6 @@ import produce from 'immer';
 
 const Graph = ({
   color,
-  setColor,
   numCols,
   setGrid,
   runningRef,
@@ -18,7 +17,7 @@ const Graph = ({
       className='grid'
       style={{
         display: 'grid',
-        gridTemplateColumns: `repeat(${numCols}, 20px)`
+        gridTemplateColumns: `repeat(${numCols}, 10px)`
       }}
     >
       {grid.map((row, i) =>
@@ -32,8 +31,8 @@ const Graph = ({
               setGrid(newGrid);
             }}
             style={{
-              width: 20,
-              height: 20,
+              width: 10,
+              height: 10,
               backgroundColor: grid[i][j] ? color : null,
               border: 'solid 1px teal'
             }}

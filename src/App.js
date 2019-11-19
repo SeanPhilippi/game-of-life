@@ -1,4 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
+import Logo from './components/Logo';
 import Graph from './components/Graph';
 import Buttons from './components/Buttons';
 import produce from 'immer';
@@ -6,8 +7,8 @@ import produce from 'immer';
 import './App.css';
 
 const App = () => {
-  const numRows = 40;
-  const numCols = 60;
+  const numRows = 80;
+  const numCols = 120;
 
   const operations = [
     [0, 1],
@@ -75,18 +76,21 @@ const App = () => {
     <div
       className='container'
     >
-      <Buttons
-        color={ color }
-        setColor={ setColor }
-        numRows={numRows}
-        numCols={numCols}
-        runSimulation={runSimulation}
-        generateEmptyGrid={generateEmptyGrid}
-        running={running}
-        setRunning={setRunning}
-        runningRef={runningRef}
-        setGrid={setGrid}
-      />
+      <div className='header'>
+        <Logo />
+        <Buttons
+          color={ color }
+          setColor={ setColor }
+          numRows={numRows}
+          numCols={numCols}
+          runSimulation={runSimulation}
+          generateEmptyGrid={generateEmptyGrid}
+          running={running}
+          setRunning={setRunning}
+          runningRef={runningRef}
+          setGrid={setGrid}
+        />
+      </div>
       <Graph
         color={ color }
         setColor={ setColor }

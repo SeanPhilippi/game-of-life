@@ -10,6 +10,18 @@ html {
   align-items: center;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 2rem 5rem;
+  margin: auto;
+}
+
+.logo {
+  font-size: 3rem;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -39,7 +51,8 @@ button:focus {
 }
 
 .grid {
-
+  cursor: pointer;
+  border: black 2px solid;
 }
 
 .hue-picker {
