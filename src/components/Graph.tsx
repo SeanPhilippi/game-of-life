@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
-import { produce } from 'immer';
-import "./App.css";
+import produce from 'immer';
 
 const numRows = 50;
 const numCols = 50;
@@ -26,10 +25,12 @@ const s = {
 const generateEmptyGrid = () => {
   const rows = [];
   for (let i = 0; i < numRows; i++) {
-    rows.push(Array.from(Array(numCols).fill(0)));
+    rows.push(
+      Array.from(Array(numCols), () => 0)
+    );
   };
   return rows;
-}
+};
 
 const Graph: React.FC = () => {
   // initializing grid with calling of useState, destructuring grid and setGrid from the return
@@ -92,7 +93,9 @@ const Graph: React.FC = () => {
         onClick={() => {
           const rows = [];
           for (let i = 0; i < numRows; i++) {
-            rows.push(Array.from(Array(numCols).fill(Math.random() > .5 ? 1 : 0)));
+            rows.push(
+              Array.from(Array(numCols), () => Math.random() > .7 ? 1 : 0)
+            );
           };
           setGrid(rows);
         }}
@@ -110,7 +113,8 @@ const Graph: React.FC = () => {
       <div style={ s.grid }>
         {
           grid.map((row, i) =>
-            row.map((col, j) => <div
+            row.map((col, j) => (
+            <div
               key={`${ i }-${ j }`}
               onClick={() => {
                 const newGrid = produce(grid, gridCopy => {
@@ -123,10 +127,10 @@ const Graph: React.FC = () => {
                 height: 20,
                 backgroundColor: grid[i][j] ? 'maroon' : undefined, // if 0, maroon, if 1, undefined.  not null due to TS
                 border: 'solid 1px teal'
-              }}/>
-            )
-          )
-        }
+              }}
+            />
+          ))
+        )}
       </div>
     </>
   );
