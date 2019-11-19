@@ -2,6 +2,18 @@ html {
   font-size: 62.5%;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
 .start {
   background-color: green;
   color: white;
@@ -18,8 +30,13 @@ button {
   width: 8rem;
   height: 2.5rem;
   margin: 1rem;
+  border-radius: .3rem;
 }
 
 button:focus {
   outline: none;
+}
+
+.grid {
+
 }

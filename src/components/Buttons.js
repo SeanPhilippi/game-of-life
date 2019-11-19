@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Buttons = ({
+  color,
+  setColor,
   running,
   setRunning,
   runningRef,
@@ -11,7 +13,8 @@ const Buttons = ({
   generateEmptyGrid
 }) => {
   return (
-    <>
+    <div className='buttons'>
+      {/* START BUTTON */}
       <button
         className={running ? 'stop' : 'start'}
         onClick={() => {
@@ -46,7 +49,21 @@ const Buttons = ({
       >
         Clear
       </button>
-    </>
+      {/* COLOR SELECT */}
+      <select
+        onChange={({ target: { value } }) => {
+          console.log('value', value)
+          setColor(value)
+        }}
+      >
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+        <option value="orange">Orange</option>
+        Clear
+      </select>
+    </div>
   );
 };
 

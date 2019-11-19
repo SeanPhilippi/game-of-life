@@ -6,8 +6,8 @@ import produce from 'immer';
 import './App.css';
 
 const App = () => {
-  const numRows = 50;
-  const numCols = 50;
+  const numRows = 40;
+  const numCols = 60;
 
   const operations = [
     [0, 1],
@@ -19,6 +19,8 @@ const App = () => {
     [1, 0],
     [-1, 0]
   ];
+
+  const [color, setColor] = useState('turquoise');
 
   const generateEmptyGrid = () => {
     const rows = [];
@@ -70,8 +72,12 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <div
+      className='container'
+    >
       <Buttons
+        color={ color }
+        setColor={ setColor }
         numRows={numRows}
         numCols={numCols}
         runSimulation={runSimulation}
@@ -82,6 +88,8 @@ const App = () => {
         setGrid={setGrid}
       />
       <Graph
+        color={ color }
+        setColor={ setColor }
         numRows={numRows}
         numCols={numCols}
         running={running}
@@ -90,7 +98,7 @@ const App = () => {
         grid={grid}
         setGrid={setGrid}
       />
-    </>
+    </div>
   );
 };
 

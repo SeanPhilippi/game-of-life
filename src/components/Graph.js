@@ -2,16 +2,20 @@ import React from 'react';
 import produce from 'immer';
 
 const Graph = ({
+  color,
+  setColor,
   numCols,
   setGrid,
   runningRef,
   running,
   grid
 }) => {
+  console.log('color', color)
   runningRef.current = running;
 
   return (
     <div
+      className='grid'
       style={{
         display: 'grid',
         gridTemplateColumns: `repeat(${numCols}, 20px)`
@@ -30,7 +34,7 @@ const Graph = ({
             style={{
               width: 20,
               height: 20,
-              backgroundColor: grid[i][j] ? 'maroon' : null,
+              backgroundColor: grid[i][j] ? color : null,
               border: 'solid 1px teal'
             }}
           />
