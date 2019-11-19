@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Graph from "./components/Graph";
 import Buttons from "./components/Buttons";
 import produce from "immer";
@@ -19,14 +19,6 @@ const App = () => {
     [1, 0],
     [-1, 0]
   ];
-  // initializing grid with calling of useState, destructuring grid and setGrid from the return
-  // first value of return is the value of the state, second it the update function
-  const [grid, setGrid] = useState(() => {
-    // using callback so this is called only upon initial render
-    return generateEmptyGrid();
-  });
-  // first param for useState is initial value
-  const [running, setRunning] = useState(false);
 
   const generateEmptyGrid = () => {
     const rows = [];
@@ -36,6 +28,14 @@ const App = () => {
     }
     return rows;
   };
+  // initializing grid with calling of useState, destructuring grid and setGrid from the return
+  // first value of return is the value of the state, second it the update function
+  const [grid, setGrid] = useState(() => {
+    // using callback so this is called only upon initial render
+    return generateEmptyGrid();
+  });
+  // first param for useState is initial value
+  const [running, setRunning] = useState(false);
 
   const runningRef = useRef(running);
 
@@ -72,21 +72,23 @@ const App = () => {
   return (
     <>
       <Buttons
-        numRows={ numRows }
-        numCols={ numCols }
-        runSimulation={ runSimulation }
-        generateEmptyGrid={ generateEmptyGrid }
-        running={ running }
-        runningRef={ runningRef }
-        setGrid={ setGrid }
+        numRows={numRows}
+        numCols={numCols}
+        runSimulation={runSimulation}
+        generateEmptyGrid={generateEmptyGrid}
+        running={running}
+        setRunning={setRunning}
+        runningRef={runningRef}
+        setGrid={setGrid}
       />
       <Graph
-        numRows={ numRows }
-        numCols={ numCols }
-        running={ running }
-        setRunning={ setRunning }
-        grid={ grid }
-        setGrid={ setGrid }
+        numRows={numRows}
+        numCols={numCols}
+        running={running}
+        setRunning={setRunning}
+        runningRef={runningRef}
+        grid={grid}
+        setGrid={setGrid}
       />
     </>
   );

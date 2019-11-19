@@ -1,4 +1,5 @@
-import React, { useState, useCallback, useRef } from "react";
+import React from "react";
+import produce from "immer";
 
 const Graph = ({
   numRows,
@@ -7,10 +8,7 @@ const Graph = ({
   runningRef,
   running,
   grid
-
 }) => {
-
-
   runningRef.current = running;
 
   return (

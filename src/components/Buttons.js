@@ -2,6 +2,7 @@ import React from "react";
 
 const Buttons = ({
   running,
+  setRunning,
   runningRef,
   runSimulation,
   numRows,
@@ -37,7 +38,7 @@ const Buttons = ({
       >
         Random
       </button>
-      ;{/* CLEAR BUTTON */}
+      {/* CLEAR BUTTON */}
       <button
         onClick={() => {
           setGrid(generateEmptyGrid());
