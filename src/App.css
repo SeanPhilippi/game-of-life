@@ -1,3 +1,4 @@
+/* don't think this is doing shit */
 html {
   font-size: 62.5%;
 }
@@ -39,4 +40,12 @@ button:focus {
 
 .grid {
 
+}
+
+.hue-picker {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: .5rem;
 }
