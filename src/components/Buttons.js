@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Buttons = ({
   running,
@@ -8,12 +8,12 @@ const Buttons = ({
   numRows,
   numCols,
   setGrid,
-  generateEmptyGrid,
+  generateEmptyGrid
 }) => {
   return (
     <>
       <button
-        className={running ? "stop" : "start"}
+        className={running ? 'stop' : 'start'}
         onClick={() => {
           setRunning(!running);
           if (!running) {
@@ -22,7 +22,7 @@ const Buttons = ({
           }
         }}
       >
-        {running ? "Stop" : "Start"}
+        {running ? 'Stop' : 'Start'}
       </button>
       {/* RANDOM BUTTON */}
       <button

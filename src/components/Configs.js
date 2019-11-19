@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from 'react';
 
-const Configs: React.FC = () => {
-  return (
-    <div>
-
-    </div>
-  );
+const Configs = () => {
+  return <div></div>;
 };
 
 export default Configs;

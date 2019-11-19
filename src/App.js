@@ -1,9 +1,9 @@
-import React, { useState, useRef, useCallback } from "react";
-import Graph from "./components/Graph";
-import Buttons from "./components/Buttons";
-import produce from "immer";
+import React, { useState, useRef, useCallback } from 'react';
+import Graph from './components/Graph';
+import Buttons from './components/Buttons';
+import produce from 'immer';
 
-import "./App.css";
+import './App.css';
 
 const App = () => {
   const numRows = 50;

@@ -1,8 +1,7 @@
-import React from "react";
-import produce from "immer";
+import React from 'react';
+import produce from 'immer';
 
 const Graph = ({
-  numRows,
   numCols,
   setGrid,
   runningRef,
@@ -14,7 +13,7 @@ const Graph = ({
   return (
     <div
       style={{
-        display: "grid",
+        display: 'grid',
         gridTemplateColumns: `repeat(${numCols}, 20px)`
       }}
     >
@@ -31,8 +30,8 @@ const Graph = ({
             style={{
               width: 20,
               height: 20,
-              backgroundColor: grid[i][j] ? "maroon" : undefined, // if 0, maroon, if 1, undefined.  not null due to TS
-              border: "solid 1px teal"
+              backgroundColor: grid[i][j] ? 'maroon' : null,
+              border: 'solid 1px teal'
             }}
           />
         ))
