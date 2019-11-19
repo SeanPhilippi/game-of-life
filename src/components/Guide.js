@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Guide: React.FC = () => {
+const Guide = () => {
   return (
     <div>
 

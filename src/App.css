@@ -1,22 +1,25 @@
-.App {
-  text-align: center;
+html {
+  font-size: 62.5%;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.start {
+  background-color: green;
   color: white;
+  font-weight: 700;
 }
 
-.App-link {
-  color: #09d3ac;
+.stop {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+}
+
+button {
+  width: 8rem;
+  height: 2.5rem;
+  margin: 1rem;
+}
+
+button:focus {
+  outline: none;
 }
