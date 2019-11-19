@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from "react";
-import produce from 'immer';
+import produce from "immer";
 
 const numRows = 50;
 const numCols = 50;
@@ -12,30 +12,29 @@ const operations = [
   [1, 1],
   [-1, -1],
   [1, 0],
-  [-1, 0],
-]
+  [-1, 0]
+];
 // styles
 const s = {
   grid: {
-    display: 'grid',
-    gridTemplateColumns: `repeat(${ numCols }, 20px)`,
-  },
+    display: "grid",
+    gridTemplateColumns: `repeat(${numCols}, 20px)`
+  }
 };
 
 const generateEmptyGrid = () => {
   const rows = [];
   for (let i = 0; i < numRows; i++) {
-    rows.push(
-      Array.from(Array(numCols), () => 0)
-    );
-  };
+    rows.push(Array.from(Array(numCols), () => 0));
+  }
   return rows;
 };
 
 const Graph: React.FC = () => {
   // initializing grid with calling of useState, destructuring grid and setGrid from the return
   // first value of return is the value of the state, second it the update function
-  const [grid, setGrid] = useState(() => { // using callback so this is called only upon initial render
+  const [grid, setGrid] = useState(() => {
+    // using callback so this is called only upon initial render
     return generateEmptyGrid();
   });
   // first param for useState is initial value
@@ -86,7 +85,7 @@ const Graph: React.FC = () => {
           }
         }}
       >
-        { running ? 'Stop' : 'Start' }
+        {running ? "Stop" : "Start"}
       </button>
       {/* RANDOM BUTTON */}
       <button
@@ -94,9 +93,9 @@ const Graph: React.FC = () => {
           const rows = [];
           for (let i = 0; i < numRows; i++) {
             rows.push(
-              Array.from(Array(numCols), () => Math.random() > .7 ? 1 : 0)
+              Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0))
             );
-          };
+          }
           setGrid(rows);
         }}
       >
@@ -110,12 +109,11 @@ const Graph: React.FC = () => {
       >
         Clear
       </button>
-      <div style={ s.grid }>
-        {
-          grid.map((row, i) =>
-            row.map((col, j) => (
+      <div style={s.grid}>
+        {grid.map((row, i) =>
+          row.map((col, j) => (
             <div
-              key={`${ i }-${ j }`}
+              key={`${i}-${j}`}
               onClick={() => {
                 const newGrid = produce(grid, gridCopy => {
                   gridCopy[i][j] = grid[i][j] ? 0 : 1;
@@ -125,8 +123,8 @@ const Graph: React.FC = () => {
               style={{
                 width: 20,
                 height: 20,
-                backgroundColor: grid[i][j] ? 'maroon' : undefined, // if 0, maroon, if 1, undefined.  not null due to TS
-                border: 'solid 1px teal'
+                backgroundColor: grid[i][j] ? "maroon" : undefined, // if 0, maroon, if 1, undefined.  not null due to TS
+                border: "solid 1px teal"
               }}
             />
           ))
