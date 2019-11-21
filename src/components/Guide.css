@@ -1,0 +1,34 @@
+.guide {
+  border: 1px solid black;
+}
+
+.diagram-row {
+  display: flex;
+  width: 150px;
+  height: 75px;
+}
+
+.diagram {
+  width: 75px;
+  height: 75px;
+}
+
+.diagram-block {
+  background-image: url("../images/still-lifes/block.png");
+  background-size: cover;
+}
+
+.diagram-boat {
+  background-image: url("../images/still-lifes/boat.png");
+  background-size: cover;
+}
+
+.diagram-beehive {
+  background-image: url("../images/still-lifes/beehive.png");
+  background-size: cover;
+}
+
+.diagram-loaf {
+  background-image: url("../images/still-lifes/loaf.png");
+  background-size: cover;
+}

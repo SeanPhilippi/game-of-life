@@ -33,7 +33,7 @@ const Graph = ({
             style={{
               width: 10,
               height: 10,
-              backgroundColor: grid[i][j] ? color : null,
+              backgroundColor: grid[i][j] ? color : 'white',
               border: 'solid 1px teal'
             }}
           />

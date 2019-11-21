@@ -1,14 +1,19 @@
 import React, { useState, useRef, useCallback } from 'react';
 import Logo from './components/Logo';
 import Graph from './components/Graph';
+import Guide from './components/Guide';
 import Buttons from './components/Buttons';
 import produce from 'immer';
 
 import './App.css';
 
 const App = () => {
-  const numRows = 80;
-  const numCols = 120;
+  const numRows = 50;
+  const numCols = 50;
+  // const [numCols, setGridWidth] = useState(50);
+  // const [numRows, setGridHeight] = useState(50);
+  console.log(numRows)
+  console.log(numCols)
 
   const operations = [
     [0, 1],
@@ -37,6 +42,7 @@ const App = () => {
     // using callback so this is called only upon initial render
     return generateEmptyGrid();
   });
+
   // first param for useState is initial value
   const [running, setRunning] = useState(false);
 
@@ -70,7 +76,7 @@ const App = () => {
       });
     });
     setTimeout(runSimulation, 300);
-  }, []);
+  }, [numCols, numRows, operations]);
 
   return (
     <div
@@ -91,10 +97,10 @@ const App = () => {
           setGrid={setGrid}
         />
       </div>
+      <Guide />
       <Graph
         color={ color }
         setColor={ setColor }
-        numRows={numRows}
         numCols={numCols}
         running={running}
         setRunning={setRunning}

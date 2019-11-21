@@ -1,6 +1,8 @@
 /* don't think this is doing shit */
 html {
   font-size: 62.5%;
+  background-color: #7ac0c2;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
 }
 
 .container {
@@ -19,7 +21,9 @@ html {
 }
 
 .logo {
+  color: teal;
   font-size: 3rem;
+  font-weight: 700;
 }
 
 .buttons {
