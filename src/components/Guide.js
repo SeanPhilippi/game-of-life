@@ -3,7 +3,10 @@ import './Guide.css';
 
 const Guide = () => {
   return (
-    <div className="guide">
+    <div className="guide text-center">
+      <div>
+        Still Lifes
+      </div>
       <div className="diagram-row">
         <div className="diagram diagram-block">
         </div>

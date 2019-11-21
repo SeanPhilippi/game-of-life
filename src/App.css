@@ -18,6 +18,7 @@ html {
   width: 80%;
   padding: 2rem 5rem;
   margin: auto;
+  border-bottom: black solid 1px;
 }
 
 .logo {
