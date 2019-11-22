@@ -67,23 +67,23 @@
   background-size: cover;
 }
 /* Spaceships */
-.diagram-beacon {
-  background-image: url("../images/oscillators/beacon.gif");
+.diagram-glider {
+  background-image: url("../images/spaceships/glider.gif");
   background-size: cover;
 }
 
-.diagram-blinker {
-  background-image: url("../images/oscillators/blinker.gif");
+.diagram-light-weight-spaceship {
+  background-image: url("../images/spaceships/light-weight-spaceship.gif");
   background-size: cover;
 }
 
-.diagram-penta-decathlon {
-  background-image: url("../images/oscillators/penta-decathlon.gif");
+.diagram-middle-weight-spaceship {
+  background-image: url("../images/spaceships/middle-weight-spaceship.gif");
   background-size: cover;
 }
 
-.diagram-pulsar {
-  background-image: url("../images/oscillators/pulsar.gif");
+.diagram-heavy-weight-spaceship {
+  background-image: url("../images/spaceships/heavy-weight-spaceship.gif");
   background-size: cover;
 }
 

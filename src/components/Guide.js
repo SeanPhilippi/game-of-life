@@ -50,18 +50,18 @@ const Guide = () => {
 
       <section>
         <div className="diagram-heading">
-          Oscillators
+          Spaceships
         </div>
         <div className="diagram-row">
-          <div className="diagram diagram-block">
+          <div className="diagram diagram-glider">
           </div>
-          <div className="diagram diagram-boat">
+          <div className="diagram diagram-light-weight-spaceship">
           </div>
         </div>
         <div className="diagram-row">
-          <div className="diagram diagram-beehive">
+          <div className="diagram diagram-middle-weight-spaceship">
           </div>
-          <div className="diagram diagram-loaf">
+          <div className="diagram diagram-heavy-weight-spaceship">
           </div>
         </div>
       </section>
