@@ -1,5 +1,5 @@
 import React from 'react';
-import './Tab.css';
+
 let className = 'tab-list-item';
 
 const Tab = ({ onClick, activeTab, label }) => {

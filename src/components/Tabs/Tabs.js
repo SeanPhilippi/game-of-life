@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Tab from '../Tab/Tab';
-// import './Tabs.css';
 
 const Tabs = ({ children }) => {
   console.log('label', children[0].props.label)

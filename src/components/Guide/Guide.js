@@ -1,5 +1,4 @@
 import React from 'react';
-import './Guide.css';
 import Tabs from '../Tabs/Tabs';
 
 const Guide = () => {

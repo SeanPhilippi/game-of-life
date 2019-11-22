@@ -1,0 +1,44 @@
+button {
+  width: 8rem;
+  height: 2.5rem;
+  margin: 1rem;
+  border-radius: .3rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  position: relative;
+  top: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.start {
+  background-color: green;
+  color: white;
+  font-weight: 700;
+}
+
+.stop {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+}
+
+.hue-picker {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: .5rem;
+}

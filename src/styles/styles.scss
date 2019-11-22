@@ -1,0 +1,11 @@
+@import './base/settings';
+@import './base/base';
+@import './base/container';
+// components
+@import '../components/Buttons/buttons.scss';
+@import '../components/Configs/configs.scss';
+@import '../components/Graph/graph.scss';
+@import '../components/Guide/guide.scss';
+@import '../components/Logo/logo.scss';
+@import '../components/Tab/tab.scss';
+@import '../components/Tabs/tabs.scss';

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import Logo from './components/Logo';
+import Logo from './components/Logo/Logo';
 import Graph from './components/Graph/Graph';
 import Guide from './components/Guide/Guide';
 import Buttons from './components/Buttons/Buttons';
