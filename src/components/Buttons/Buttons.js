@@ -15,7 +15,6 @@ const Buttons = ({
   generateEmptyGrid
 }) => {
   const handleChangeComplete = color => {
-    console.log(color);
     setColor(color.hex);
   };
   return (

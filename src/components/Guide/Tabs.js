@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import Tab from '../Tab/Tab';
+import Tab from './Tab';
 
 const Tabs = ({ children }) => {
-  console.log('label', children[0].props.label)
   const [activeTab, onActiveTabClick] = useState(children[0].props.label);
-  console.log('active', activeTab)
   return (
     <div className="tabs">
       <ol className="tab-list">
