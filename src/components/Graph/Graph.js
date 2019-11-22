@@ -9,7 +9,6 @@ const Graph = ({
   running,
   grid
 }) => {
-  console.log('color', color)
   runningRef.current = running;
 
   return (

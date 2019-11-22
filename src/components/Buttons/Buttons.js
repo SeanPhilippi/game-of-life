@@ -11,6 +11,7 @@ const Buttons = ({
   numRows,
   numCols,
   setGrid,
+  setSpeed,
   generateEmptyGrid
 }) => {
   const handleChangeComplete = color => {

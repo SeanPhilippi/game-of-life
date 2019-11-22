@@ -1,8 +1,8 @@
 import React, { useState, useRef, useCallback } from 'react';
 import Logo from './components/Logo';
-import Graph from './components/Graph';
-import Guide from './components/Guide';
-import Buttons from './components/Buttons';
+import Graph from './components/Graph/Graph';
+import Guide from './components/Guide/Guide';
+import Buttons from './components/Buttons/Buttons';
 import produce from 'immer';
 
 import './App.css';
@@ -10,10 +10,6 @@ import './App.css';
 const App = () => {
   const numRows = 50;
   const numCols = 50;
-  // const [numCols, setGridWidth] = useState(50);
-  // const [numRows, setGridHeight] = useState(50);
-  console.log(numRows)
-  console.log(numCols)
 
   const operations = [
     [0, 1],
@@ -25,6 +21,8 @@ const App = () => {
     [1, 0],
     [-1, 0]
   ];
+
+  const [speed, setSpeed] = useState(500);
 
   const [color, setColor] = useState('turquoise');
 
@@ -75,8 +73,8 @@ const App = () => {
         }
       });
     });
-    setTimeout(runSimulation, 300);
-  }, [numCols, numRows, operations]);
+    setTimeout(runSimulation, speed);
+  }, [numCols, numRows, operations, speed]);
 
   return (
     <div
@@ -95,6 +93,7 @@ const App = () => {
           setRunning={setRunning}
           runningRef={runningRef}
           setGrid={setGrid}
+          setSpeed={setSpeed}
         />
       </div>
       <Guide />
