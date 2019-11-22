@@ -15,8 +15,13 @@
 .diagram {
   width: 75px;
   height: 75px;
+  background-color: white;
 }
 
+.diagram-heading {
+  background-color: lightgrey;
+}
+/* Static */
 .diagram-block {
   background-image: url("../images/still-lifes/block.png");
   background-size: cover;
@@ -34,5 +39,55 @@
 
 .diagram-loaf {
   background-image: url("../images/still-lifes/loaf.png");
+  background-size: cover;
+}
+/* Oscillators */
+.diagram-beacon {
+  background-image: url("../images/oscillators/beacon.gif");
+  background-size: cover;
+}
+
+.diagram-blinker {
+  background-image: url("../images/oscillators/blinker.gif");
+  background-size: cover;
+}
+
+.diagram-penta-decathlon {
+  background-image: url("../images/oscillators/penta-decathlon.gif");
+  background-size: cover;
+}
+
+.diagram-pulsar {
+  background-image: url("../images/oscillators/pulsar.gif");
+  background-size: cover;
+}
+
+.diagram-toad {
+  background-image: url("../images/oscillators/toad.gif");
+  background-size: cover;
+}
+/* Spaceships */
+.diagram-beacon {
+  background-image: url("../images/oscillators/beacon.gif");
+  background-size: cover;
+}
+
+.diagram-blinker {
+  background-image: url("../images/oscillators/blinker.gif");
+  background-size: cover;
+}
+
+.diagram-penta-decathlon {
+  background-image: url("../images/oscillators/penta-decathlon.gif");
+  background-size: cover;
+}
+
+.diagram-pulsar {
+  background-image: url("../images/oscillators/pulsar.gif");
+  background-size: cover;
+}
+
+.diagram-toad {
+  background-image: url("../images/oscillators/toad.gif");
   background-size: cover;
 }

@@ -1,6 +1,9 @@
 /* don't think this is doing shit */
 html {
   font-size: 62.5%;
+}
+
+#root {
   background-color: #7ac0c2;
   background-image: url("https://www.transparenttextures.com/patterns/connected.png");
 }
@@ -18,7 +21,6 @@ html {
   width: 80%;
   padding: 2rem 5rem;
   margin: auto;
-  border-bottom: black solid 1px;
 }
 
 .logo {
