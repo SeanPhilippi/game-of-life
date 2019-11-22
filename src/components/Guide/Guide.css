@@ -23,71 +23,71 @@
 }
 /* Static */
 .diagram-block {
-  background-image: url("../images/still-lifes/block.png");
+  background-image: url("../../images/still-lifes/block.png");
   background-size: cover;
 }
 
 .diagram-boat {
-  background-image: url("../images/still-lifes/boat.png");
+  background-image: url("../../images/still-lifes/boat.png");
   background-size: cover;
 }
 
 .diagram-beehive {
-  background-image: url("../images/still-lifes/beehive.png");
+  background-image: url("../../images/still-lifes/beehive.png");
   background-size: cover;
 }
 
 .diagram-loaf {
-  background-image: url("../images/still-lifes/loaf.png");
+  background-image: url("../../images/still-lifes/loaf.png");
   background-size: cover;
 }
 /* Oscillators */
 .diagram-beacon {
-  background-image: url("../images/oscillators/beacon.gif");
+  background-image: url("../../images/oscillators/beacon.gif");
   background-size: cover;
 }
 
 .diagram-blinker {
-  background-image: url("../images/oscillators/blinker.gif");
+  background-image: url("../../images/oscillators/blinker.gif");
   background-size: cover;
 }
 
 .diagram-penta-decathlon {
-  background-image: url("../images/oscillators/penta-decathlon.gif");
+  background-image: url("../../images/oscillators/penta-decathlon.gif");
   background-size: cover;
 }
 
 .diagram-pulsar {
-  background-image: url("../images/oscillators/pulsar.gif");
+  background-image: url("../../images/oscillators/pulsar.gif");
   background-size: cover;
 }
 
 .diagram-toad {
-  background-image: url("../images/oscillators/toad.gif");
+  background-image: url("../../images/oscillators/toad.gif");
   background-size: cover;
 }
 /* Spaceships */
 .diagram-glider {
-  background-image: url("../images/spaceships/glider.gif");
+  background-image: url("../../images/spaceships/glider.gif");
   background-size: cover;
 }
 
 .diagram-light-weight-spaceship {
-  background-image: url("../images/spaceships/light-weight-spaceship.gif");
+  background-image: url("../../images/spaceships/light-weight-spaceship.gif");
   background-size: cover;
 }
 
 .diagram-middle-weight-spaceship {
-  background-image: url("../images/spaceships/middle-weight-spaceship.gif");
+  background-image: url("../../images/spaceships/middle-weight-spaceship.gif");
   background-size: cover;
 }
 
 .diagram-heavy-weight-spaceship {
-  background-image: url("../images/spaceships/heavy-weight-spaceship.gif");
+  background-image: url("../../images/spaceships/heavy-weight-spaceship.gif");
   background-size: cover;
 }
 
 .diagram-toad {
-  background-image: url("../images/oscillators/toad.gif");
+  background-image: url("../../images/oscillators/toad.gif");
   background-size: cover;
 }

@@ -3,7 +3,9 @@ import Tab from '../Tab/Tab';
 // import './Tabs.css';
 
 const Tabs = ({ children }) => {
+  console.log('label', children[0].props.label)
   const [activeTab, onActiveTabClick] = useState(children[0].props.label);
+  console.log('active', activeTab)
   return (
     <div className="tabs">
       <ol className="tab-list">
@@ -22,7 +24,7 @@ const Tabs = ({ children }) => {
       <div className="tab-content">
         {children.map(child => {
           const { children } = child.props;
-          if (child.props.label !== activeTab) return null;
+          if (child.props.label !== activeTab) return undefined;
           return children;
         })}
       </div>
