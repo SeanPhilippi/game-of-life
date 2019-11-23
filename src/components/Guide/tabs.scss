@@ -2,6 +2,10 @@
   background-color: white;
 }
 
+.tab-content {
+
+}
+
 .tab-list {
   border-bottom: 1px solid #ccc;
   padding-left: 0;
@@ -16,7 +20,7 @@
 }
 
 .tab-list-active {
-  background-color: $primary-color;
+  background-color: $secondary-light;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
 }

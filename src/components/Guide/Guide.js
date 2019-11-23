@@ -6,7 +6,7 @@ const Guide = () => {
     <div className="guide text-center">
       <Tabs>
         <div label="Still Lifes">
-          <section className="diagram-content d-flex flex-column justify-content-between">
+          <section className="diagram-content pt-1 d-flex flex-column justify-content-between">
             <div className="diagram-row d-flex justify-content-between">
               <div className="diagram diagram-block">
               </div>
@@ -22,7 +22,7 @@ const Guide = () => {
           </section>
         </div>
         <div label="Oscillators">
-          <section className="diagram-content d-flex flex-column justify-content-between">
+          <section className="diagram-content pt-1 d-flex flex-column justify-content-between">
             <div className="diagram-row d-flex justify-content-between">
               <div className="diagram diagram-beacon">
               </div>
@@ -40,7 +40,7 @@ const Guide = () => {
           </section>
         </div>
         <div label="Spaceships">
-          <section className="diagram-content d-flex flex-column justify-content-between">
+          <section className="diagram-content pt-1 d-flex flex-column justify-content-between">
             <div className="diagram-row d-flex justify-content-between">
               <div className="diagram diagram-glider">
               </div>
