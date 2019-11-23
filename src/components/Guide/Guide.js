@@ -18,6 +18,10 @@ const Guide = () => {
             <div className="diagram-row d-flex justify-content-between">
               <div className="diagram diagram-loaf">
               </div>
+              <div className="diagram bg-transparent">
+              </div>
+              <div className="diagram bg-transparent">
+              </div>
             </div>
           </section>
         </div>
@@ -36,6 +40,8 @@ const Guide = () => {
               </div>
               <div className="diagram diagram-toad">
               </div>
+              <div className="diagram bg-transparent">
+              </div>
             </div>
           </section>
         </div>
@@ -51,6 +57,10 @@ const Guide = () => {
             </div>
             <div className="diagram-row d-flex justify-content-between">
               <div className="diagram diagram-heavy-weight-spaceship">
+              </div>
+              <div className="diagram bg-transparent">
+              </div>
+              <div className="diagram bg-transparent">
               </div>
             </div>
           </section>

@@ -22,7 +22,7 @@ const App = () => {
     [-1, 0]
   ];
 
-  const [speed, setSpeed] = useState(500);
+  const [speed, setSpeed] = useState(200);
 
   const [color, setColor] = useState('turquoise');
 

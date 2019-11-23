@@ -16,7 +16,7 @@ const Graph = ({
       className='grid'
       style={{
         display: 'grid',
-        gridTemplateColumns: `repeat(${numCols}, 10px)`
+        gridTemplateColumns: `repeat(${numCols}, 12px)`
       }}
     >
       {grid.map((row, i) =>
@@ -30,10 +30,10 @@ const Graph = ({
               setGrid(newGrid);
             }}
             style={{
-              width: 10,
-              height: 10,
+              width: 12,
+              height: 12,
               backgroundColor: grid[i][j] ? color : 'white',
-              border: 'solid 1px teal'
+              border: 'solid 1px black'
             }}
           />
         ))

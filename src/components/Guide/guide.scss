@@ -8,16 +8,18 @@
 
 .diagram-content {
   background-color: $secondary-light;
-  height: 157px;
+  min-width: 240px;
+  height: 153px;
 }
 
 .diagram-row {
   height: 75px;
+  display: flex;
 }
 
 .diagram {
-  width: 75px;
-  height: 75px;
+  flex: 1;
+  margin: .2rem;
   background-color: white;
 }
 
