@@ -5,6 +5,7 @@
 .tab-list {
   border-bottom: 1px solid #ccc;
   padding-left: 0;
+  margin: 0;
 }
 
 .tab-list-item {
@@ -15,7 +16,7 @@
 }
 
 .tab-list-active {
-  background-color: white;
+  background-color: $primary-color;
   border: solid #ccc;
   border-width: 1px 1px 0 1px;
 }

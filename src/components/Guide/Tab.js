@@ -3,12 +3,9 @@ import React from 'react';
 let className = 'tab-list-item';
 
 const Tab = ({ onClick, activeTab, label }) => {
-  if (activeTab === label) {
-    className += ' tab-list-active';
-  }
   return (
     <li
-      className={className}
+      className={`tab-list-item ${ activeTab === label ? 'tab-list-active' : '' }`}
       onClick={() => onClick(label)}
     >
       { label }
