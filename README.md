@@ -5,6 +5,6 @@ https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 
 ## Technologies Used
 * React Hooks
-* Node
-* Express
+* SCSS
 * Immer
+* Material UI
