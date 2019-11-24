@@ -16,6 +16,51 @@ const Settings = ({
   speed,
   generateEmptyGrid
 }) => {
+
+  const marks = [
+    {
+      value: 500,
+      label: '500 ms',
+    },
+    {
+      value: 450,
+      label: '450 ms',
+    },
+    {
+      value: 400,
+      label: '400 ms',
+    },
+    {
+      value: 350,
+      label: '350 ms',
+    },
+    {
+      value: 300,
+      label: '300 ms',
+    },
+    {
+      value: 250,
+      label: '250 ms',
+    },
+    {
+      value: 200,
+      label: '200 ms',
+    },
+    {
+      value: 150,
+      label: '150 ms',
+    },
+    {
+      value: 100,
+      label: '100 ms',
+    },
+    {
+      value: 50,
+      label: '50 ms',
+    },
+  ];
+
+
   const handleChangeComplete = color => {
     setColor(color.hex);
   };
@@ -70,7 +115,8 @@ const Settings = ({
         </div>
       </div>
       <div className="settings2">
-        <label htmlFor="hue-picker">Speed</label>
+        {/* SPEED SLIDER */}
+        <label htmlFor="speed-slider">Speed</label>
         <Slider
           value={speed}
           onChange={(e, newValue) => setSpeed(newValue)}
@@ -79,10 +125,10 @@ const Settings = ({
           getAriaValueText={value => `${value}`}
           aria-labelledby="speed slider"
           step={50}
-          marks
-          min={0}
+          marks={marks}
+          min={50}
           max={500}
-          valueLabelDisplay="auto"
+          valueLabelDisplay="off"
         />
       </div>
     </div>
