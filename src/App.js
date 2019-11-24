@@ -2,7 +2,7 @@ import React, { useState, useRef, useCallback } from 'react';
 import Logo from './components/Logo/Logo';
 import Graph from './components/Graph/Graph';
 import Guide from './components/Guide/Guide';
-import Buttons from './components/Buttons/Buttons';
+import Settings from './components/Settings/Settings';
 import produce from 'immer';
 
 import './App.css';
@@ -82,7 +82,7 @@ const App = () => {
     >
       <div className='header'>
         <Logo />
-        <Buttons
+        <Settings
           color={ color }
           setColor={ setColor }
           numRows={numRows}
@@ -94,6 +94,7 @@ const App = () => {
           runningRef={runningRef}
           setGrid={setGrid}
           setSpeed={setSpeed}
+          speed={speed}
         />
       </div>
       <Guide />
