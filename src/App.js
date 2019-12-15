@@ -26,19 +26,22 @@ const App = () => {
 
   const [color, setColor] = useState('turquoise');
 
+  const [speedDisabled, setSpeedDisabled] = useState(false);
+
   const generateEmptyGrid = () => {
     const rows = [];
     for (let i = 0; i < numRows; i++) {
+      // creating Array of numCols length, mapping 0s with mapping callback
       rows.push(Array.from(Array(numCols), () => 0));
       // rows.push(Array.from(Array(numCols).fill(0)));
     }
     return rows;
   };
   // initializing grid with calling of useState, destructuring grid and setGrid from the return
-  // first value of return is the value of the state, second it the update function
+  // first value of return is the value of the state, second is the update function
   const [grid, setGrid] = useState(() => {
     // using callback so this is called only upon initial render
-    return generateEmptyGrid();
+    return generateEmptyGrid(); // default value is returned empty grid
   });
 
   // first param for useState is initial value
@@ -77,14 +80,12 @@ const App = () => {
   }, [numCols, numRows, operations, speed]);
 
   return (
-    <div
-      className='container'
-    >
-      <div className='header'>
+    <div className="container">
+      <div className="header">
         <Logo />
         <Settings
-          color={ color }
-          setColor={ setColor }
+          color={color}
+          setColor={setColor}
           numRows={numRows}
           numCols={numCols}
           runSimulation={runSimulation}
@@ -95,12 +96,14 @@ const App = () => {
           setGrid={setGrid}
           setSpeed={setSpeed}
           speed={speed}
+          speedDisabled={speedDisabled}
+          setSpeedDisabled={setSpeedDisabled}
         />
       </div>
       <Guide />
       <Graph
-        color={ color }
-        setColor={ setColor }
+        color={color}
+        setColor={setColor}
         numCols={numCols}
         running={running}
         setRunning={setRunning}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HuePicker } from 'react-color';
 import { Slider } from '@material-ui/core';
 
@@ -12,8 +12,10 @@ const Settings = ({
   numRows,
   numCols,
   setGrid,
-  setSpeed,
   speed,
+  setSpeed,
+  speedDisabled,
+  setSpeedDisabled,
   generateEmptyGrid
 }) => {
 
@@ -74,6 +76,7 @@ const Settings = ({
             className={running ? 'stop' : 'start'}
             onClick={() => {
               setRunning(!running);
+              setSpeedDisabled(!speedDisabled)
               if (!running) {
                 runningRef.current = true;
                 runSimulation();
@@ -88,6 +91,8 @@ const Settings = ({
               const rows = [];
               for (let i = 0; i < numRows; i++) {
                 rows.push(
+                  // map random 0s and 1s with mapping callback, biased towards 1 to populate grid more
+                  // creating arrays of cols to push into the rows array
                   Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0))
                 );
               }
@@ -129,6 +134,7 @@ const Settings = ({
           min={50}
           max={500}
           valueLabelDisplay="off"
+          disabled={speedDisabled}
         />
       </div>
     </div>
