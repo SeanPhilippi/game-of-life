@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/game-of-life/static/css/main.fa13c303.chunk.css",
+    "main.js": "/game-of-life/static/js/main.b4fcdd09.chunk.js",
+    "main.js.map": "/game-of-life/static/js/main.b4fcdd09.chunk.js.map",
+    "runtime-main.js": "/game-of-life/static/js/runtime-main.51be29ed.js",
+    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.51be29ed.js.map",
+    "static/js/2.b45cf59c.chunk.js": "/game-of-life/static/js/2.b45cf59c.chunk.js",
+    "static/js/2.b45cf59c.chunk.js.map": "/game-of-life/static/js/2.b45cf59c.chunk.js.map",
+    "index.html": "/game-of-life/index.html",
+    "precache-manifest.ce47e56c51b3ad4d6d62cf8a400976a4.js": "/game-of-life/precache-manifest.ce47e56c51b3ad4d6d62cf8a400976a4.js",
+    "service-worker.js": "/game-of-life/service-worker.js",
+    "static/css/main.fa13c303.chunk.css.map": "/game-of-life/static/css/main.fa13c303.chunk.css.map",
+    "static/media/styles.scss": "/game-of-life/static/media/penta-decathlon.003465bd.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51be29ed.js",
+    "static/js/2.b45cf59c.chunk.js",
+    "static/css/main.fa13c303.chunk.css",
+    "static/js/main.b4fcdd09.chunk.js"
+  ]
+}
