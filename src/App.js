@@ -7,7 +7,7 @@ import produce from 'immer';
 
 import './App.css';
 
-const App: React.FC = () => {
+const App = () => {
   const numRows = 50;
   const numCols = 50;
 
