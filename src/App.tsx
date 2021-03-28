@@ -22,11 +22,11 @@ const App: React.FC = () => {
     [-1, 0]
   ];
 
-  const [speed, setSpeed] = useState(200);
+  const [speed, setSpeed] = useState<number>(200);
 
-  const [color, setColor] = useState('turquoise');
+  const [color, setColor] = useState<string>('turquoise');
 
-  const [speedDisabled, setSpeedDisabled] = useState(false);
+  const [speedDisabled, setSpeedDisabled] = useState<boolean>(false);
 
   const generateEmptyGrid = () => {
     const rows = [];
@@ -45,9 +45,9 @@ const App: React.FC = () => {
   });
 
   // first param for useState is initial value
-  const [running, setRunning] = useState(false);
+  const [running, setRunning] = useState<boolean>(false);
 
-  const runningRef = useRef(running);
+  const runningRef = useRef<Value>(running);
 
   const runSimulation = useCallback(() => {
     if (!runningRef.current) {
